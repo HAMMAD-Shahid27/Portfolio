@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -109,7 +111,11 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <Button size="sm" className="flex-1 bg-indigo-600 hover:bg-indigo-700">
+                    <Button
+                      size="sm"
+                      className="flex-1 bg-indigo-600 hover:bg-indigo-700"
+                      onClick={() => window.open(project.liveUrl, "_blank")}
+                    >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       View Project
                     </Button>
@@ -117,6 +123,7 @@ export function Projects() {
                       variant="outline"
                       size="sm"
                       className="border-indigo-200 text-indigo-600 hover:bg-indigo-50 bg-transparent"
+                      onClick={() => window.open(project.githubUrl, "_blank")}
                     >
                       <Github className="h-4 w-4" />
                     </Button>

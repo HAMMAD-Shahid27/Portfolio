@@ -26,13 +26,16 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.href}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                onClick={() => {
+                  const element = document.querySelector(item.href)
+                  element?.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </nav>
 
@@ -46,14 +49,17 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.href}
-                href={item.href}
-                className="block py-2 text-muted-foreground hover:text-primary transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  const element = document.querySelector(item.href)
+                  element?.scrollIntoView({ behavior: "smooth" })
+                  setIsMenuOpen(false)
+                }}
+                className="block py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </nav>
         )}

@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download } from "lucide-react"
 
@@ -44,13 +46,28 @@ export function Hero() {
           </div>
 
           <div className="flex justify-center space-x-6">
-            <Button variant="ghost" size="icon" className="hover:bg-indigo-100 hover:text-indigo-600">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-indigo-100 hover:text-indigo-600"
+              onClick={() => window.open("https://github.com/HAMMAD-Shahid27", "_blank")}
+            >
               <Github className="h-6 w-6" />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-indigo-100 hover:text-indigo-600">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-indigo-100 hover:text-indigo-600"
+              onClick={() => window.open("https://www.linkedin.com/in/hammad-shahid-23a560350/", "_blank")}
+            >
               <Linkedin className="h-6 w-6" />
             </Button>
-            <Button variant="ghost" size="icon" className="hover:bg-indigo-100 hover:text-indigo-600">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="hover:bg-indigo-100 hover:text-indigo-600"
+              onClick={() => window.open("mailto:hammadshahid980@gmail.com")}
+            >
               <Mail className="h-6 w-6" />
             </Button>
           </div>
