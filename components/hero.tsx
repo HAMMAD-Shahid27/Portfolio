@@ -31,7 +31,19 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg"
+              onClick={() => {
+                const projectsSection = document.querySelector("#projects")
+                if (projectsSection) {
+                  projectsSection.scrollIntoView({ behavior: "smooth" })
+                } else {
+                  // Fallback to GitHub if projects section not found
+                  window.open("https://github.com/HAMMAD-Shahid27", "_blank")
+                }
+              }}
+            >
               <Github className="h-5 w-5 mr-2" />
               Explore My Research
             </Button>
@@ -39,6 +51,10 @@ export function Hero() {
               variant="outline"
               size="lg"
               className="w-full sm:w-auto border-indigo-200 text-indigo-600 hover:bg-indigo-50 bg-transparent"
+              onClick={() => {
+                // You can replace this with an actual CV download link
+                alert("CV download will be available soon! For now, please contact me via email.")
+              }}
             >
               <Download className="h-5 w-5 mr-2" />
               Download CV
