@@ -1,39 +1,22 @@
 "use client"
-
-import type React from "react"
-import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react"
+import { useActionState } from "react"
+import { submitContactForm } from "@/actions/contact"
 
 export function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+  const [state, action, isPending] = useActionState(submitContactForm, null)
 
   const contactMethods = [
     {
       icon: Mail,
       title: "Email",
       value: "hammadshahid980@gmail.com",
-      description: "Best for detailed project discussions",
+      description: "Best for project discussions & collaborations",
       color: "from-indigo-500 to-purple-600",
     },
     {
@@ -47,7 +30,7 @@ export function Contact() {
       icon: MapPin,
       title: "Location",
       value: "Gujranwala, Pakistan",
-      description: "Available for remote collaboration",
+      description: "Available for remote development work",
       color: "from-blue-500 to-cyan-600",
     },
   ]
@@ -61,10 +44,10 @@ export function Contact() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Let's Collaborate
+              Let's Build Something Amazing
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Ready to push the boundaries of AI research together? Let's discuss your next breakthrough project.
+              Ready to bring your AI ideas to life? Let's discuss your next software project or research collaboration.
             </p>
           </div>
 
@@ -73,26 +56,26 @@ export function Contact() {
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
                   <MessageCircle className="w-6 h-6 mr-3 text-indigo-600" />
-                  Research Opportunities
+                  Development & Research Opportunities
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  I'm actively seeking collaborations in computer vision, unsupervised learning, and medical AI. Whether
-                  you're a researcher, startup, or enterprise looking to leverage cutting-edge AI, I'd love to explore
-                  how we can create something extraordinary together.
+                  I'm actively seeking opportunities in AI development, full-stack projects, and research
+                  collaborations. Whether you need a custom AI solution, web application, or want to explore
+                  cutting-edge research, I'd love to help bring your vision to reality.
                 </p>
 
                 <div className="space-y-4">
                   <div className="flex items-center text-sm text-gray-600">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Available for research collaborations
+                    Available for software development projects
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Open to consulting opportunities
+                    Open to research collaborations
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Interested in PhD/Research positions
+                    Interested in full-time opportunities
                   </div>
                 </div>
               </div>
@@ -127,7 +110,7 @@ export function Contact() {
                 <CardDescription className="text-indigo-100">I typically respond within 24 hours</CardDescription>
               </CardHeader>
               <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action={action} className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="name" className="text-gray-700 font-medium">
                       Full Name
@@ -135,8 +118,6 @@ export function Contact() {
                     <Input
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleChange}
                       required
                       className="border-gray-200 focus:border-indigo-500 focus:ring-indigo-500"
                       placeholder="Your full name"
@@ -151,8 +132,6 @@ export function Contact() {
                       id="email"
                       name="email"
                       type="email"
-                      value={formData.email}
-                      onChange={handleChange}
                       required
                       className="border-gray-200 focus:border-indigo-500 focus:ring-indigo-500"
                       placeholder="your.email@example.com"
@@ -167,22 +146,29 @@ export function Contact() {
                       id="message"
                       name="message"
                       rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
                       required
                       className="border-gray-200 focus:border-indigo-500 focus:ring-indigo-500"
-                      placeholder="Tell me about your project, research goals, or collaboration ideas..."
+                      placeholder="Tell me about your project, development needs, or collaboration ideas..."
                     />
                   </div>
 
                   <Button
                     type="submit"
+                    disabled={isPending}
                     className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-lg"
                   >
                     <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    {isPending ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
+
+                {state && (
+                  <div
+                    className={`mt-4 p-4 rounded-lg ${state.success ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}
+                  >
+                    {state.message}
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>

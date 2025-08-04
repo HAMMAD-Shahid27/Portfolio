@@ -1,27 +1,27 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Brain, Eye, Zap, Target } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { Brain, Code, Zap, Target } from "lucide-react"
 
 export function About() {
   const highlights = [
     {
       icon: Brain,
-      title: "Deep Learning Expert",
-      description: "Specialized in neural architectures and self-supervised learning methods",
+      title: "Computer Vision Expert",
+      description: "Advanced image processing, object detection, and video analysis systems",
     },
     {
-      icon: Eye,
-      title: "Computer Vision Pioneer",
-      description: "Advanced research in video object segmentation and optical flow",
+      icon: Code,
+      title: "LLM Specialist",
+      description: "Large Language Models, NLP, and conversational AI applications",
     },
     {
       icon: Zap,
-      title: "Innovation Driven",
-      description: "Constantly exploring LangChain, RAFT, and generative AI applications",
+      title: "Deep Learning Engineer",
+      description: "Neural networks, model optimization, and production deployment",
     },
     {
       icon: Target,
-      title: "Problem Solver",
-      description: "Turning complex research challenges into practical AI solutions",
+      title: "Full-Stack Developer",
+      description: "End-to-end web applications with AI/ML integration",
     },
   ]
 
@@ -34,57 +34,48 @@ export function About() {
               About Me
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Bridging the gap between theoretical research and real-world AI applications
+              AI/ML Engineer building intelligent systems with expertise in Computer Vision, LLMs, and Web Development
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            <div>
-              <Card className="overflow-hidden shadow-xl border-0">
-                <CardContent className="p-0">
-                  <div className="aspect-square bg-gradient-to-br from-indigo-400 to-purple-500 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center">
-                      <Brain className="w-16 h-16 text-indigo-600" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Research-Driven Innovation</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  As a Data Science graduate, I've dedicated my career to pushing the boundaries of artificial
-                  intelligence. My research focuses on unsupervised video object segmentation, where I develop novel
-                  approaches that don't require labeled training data—a breakthrough that's reshaping how we understand
-                  visual learning.
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="space-y-8">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">AI/ML Engineering Excellence</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                  As an AI/ML Engineer with strong expertise in <strong>Computer Vision</strong>,{" "}
+                  <strong>Large Language Models (LLMs)</strong>, and <strong>Deep Learning</strong>, I specialize in
+                  developing intelligent systems that solve real-world problems. My experience spans from research-level
+                  algorithm development to production-ready AI applications.
                 </p>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Beyond Traditional AI</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  I'm passionate about leveraging advanced learning techniques and deep neural architectures to solve real-world challenges—especially in medical imaging. My work integrates Machine Learning, Deep Learning, LLMs, and Computer Vision to develop adaptive, scalable AI systems that enhance diagnostic accuracy and accessibility in healthcare. I focus on transferability, representation learning, and model efficiency across diverse data scenarios.
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Full-Stack AI Solutions</h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                  With hands-on experience in web development, I create end-to-end AI solutions that seamlessly
+                  integrate machine learning models with scalable web applications. From computer vision systems and
+                  LLM-powered chatbots to deep learning pipelines and intelligent web platforms—I build technology that
+                  delivers measurable impact.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6 pt-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-2xl mx-auto">
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
-                  <h4 className="text-2xl font-bold text-indigo-600 mb-1">4+</h4>
-                  <p className="text-gray-600 text-sm">Research Projects</p>
+                  <h4 className="text-2xl font-bold text-indigo-600 mb-1">5+</h4>
+                  <p className="text-gray-600 text-sm">AI/ML Projects</p>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
-                  <h4 className="text-2xl font-bold text-purple-600 mb-1">15+</h4>
-                  <p className="text-gray-600 text-sm">AI Models Built</p>
+                  <h4 className="text-2xl font-bold text-purple-600 mb-1">10+</h4>
+                  <p className="text-gray-600 text-sm">Web Applications</p>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
-                  <h4 className="text-2xl font-bold text-indigo-600 mb-1">3</h4>
-                  <p className="text-gray-600 text-sm">Datasets Published</p>
-                </div>
-                <div className="text-center p-4 bg-white rounded-lg shadow-md">
-                  <h4 className="text-2xl font-bold text-purple-600 mb-1">20+</h4>
+                  <h4 className="text-2xl font-bold text-indigo-600 mb-1">25+</h4>
                   <p className="text-gray-600 text-sm">Technologies Mastered</p>
+                </div>
+                <div className="text-center p-4 bg-white rounded-lg shadow-md">
+                  <h4 className="text-2xl font-bold text-purple-600 mb-1">1000+</h4>
+                  <p className="text-gray-600 text-sm">Hours of Development</p>
                 </div>
               </div>
             </div>

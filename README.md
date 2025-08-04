@@ -1,59 +1,30 @@
-# 🚀 Hammad Shahid · AI Portfolio
+# Make a portfolio
 
-[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-Click%20Here-0A66C2?style=for-the-badge&logo=internet-explorer)](https://hammad-shahid-portfolio.vercel.app)
+*Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
-## 🌟 Welcome
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/hammadshahid980-gmailcoms-projects/v0-make-a-portfolio)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/OTZIMXWhdXA)
 
-This repository contains the codebase for my personal portfolio — a modern, responsive website highlighting my journey, expertise, and AI projects.  
-It's continuously updated to reflect my latest work, skills, and research in the fields of **AI**, **Deep Learning**, and **Data Science**.
+## Overview
 
----
+This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
+Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
 
-## 💡 About Me
+## Deployment
 
-Hi! I'm **Hammad Shahid**, a passionate AI researcher and developer with expertise in:
+Your project is live at:
 
-- 🤖 Machine Learning & Deep Learning  
-- 🧠 Computer Vision & Medical Imaging  
-- 📊 Data Analysis & Visualization  
-- 🧪 Research & Innovation  
-- 🚀 End-to-End Project Deployment
+**[https://vercel.com/hammadshahid980-gmailcoms-projects/v0-make-a-portfolio](https://vercel.com/hammadshahid980-gmailcoms-projects/v0-make-a-portfolio)**
 
----
+## Build your app
 
-## 🧰 Tech Stack
+Continue building your app on:
 
-- **Frontend:** React (generated layout)  
-- **Hosting:** Cloud-based auto-deployment  
-- **Version Control:** Git & GitHub
+**[https://v0.dev/chat/projects/OTZIMXWhdXA](https://v0.dev/chat/projects/OTZIMXWhdXA)**
 
----
+## How It Works
 
-## 📂 Portfolio Highlights
-
-- ✅ AI & Deep Learning Projects  
-- ✅ Medical Imaging Solutions  
-- ✅ Research Work & Publications  
-- ✅ Interactive Contact Section  
-- ✅ Resume & Social Links
-
----
-
-## 🔗 Live Website
-
-[![🌐 Portfolio](https://img.shields.io/badge/View%20Portfolio-Click%20Here-blue?style=for-the-badge)](https://hammad-shahid-portfolio.vercel.app)
-
----
-
-## 📬 Contact Me
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/hammad-shahid-23a560350/)  
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-informational?logo=gmail&style=for-the-badge)](mailto:hammadshahid980@gmail.com)
-
-
----
-
-## 📎 License
-
-This project is open-source and intended for personal showcase purposes. Feel free to explore or fork for inspiration.
-
+1. Create and modify your project using [v0.dev](https://v0.dev)
+2. Deploy your chats from the v0 interface
+3. Changes are automatically pushed to this repository
+4. Vercel deploys the latest version from this repository

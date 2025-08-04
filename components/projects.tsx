@@ -10,9 +10,9 @@ export function Projects() {
     {
       title: "UVOS: Next-Gen Video Segmentation",
       description:
-        "Revolutionary unsupervised approach to video object segmentation using contrastive learning. Achieved state-of-the-art results on DAVIS-2017 without requiring any labeled training data—a paradigm shift in computer vision research.",
+        "Revolutionary unsupervised video object segmentation system with production-ready deployment. Built end-to-end pipeline from research implementation to scalable application, achieving state-of-the-art results on DAVIS-2017 dataset.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["PyTorch", "RAFT Optical Flow", "Contrastive Learning", "DAVIS Dataset"],
+      technologies: ["PyTorch", "RAFT Optical Flow", "FastAPI", "Docker"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
       githubUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
       gradient: "gradient-bg-1",
@@ -21,9 +21,9 @@ export function Projects() {
     {
       title: "AI Photo Restoration Engine",
       description:
-        "End-to-end deep learning pipeline that breathes new life into damaged photographs. Combines GANs with attention mechanisms to restore missing details, remove artifacts, and enhance image quality with remarkable precision.",
+        "Full-stack photo restoration application combining advanced GANs with intuitive web interface. Features real-time processing, batch operations, and RESTful API for seamless integration with existing workflows.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["GANs", "Attention Networks", "Image Processing", "Flask API"],
+      technologies: ["GANs", "Flask", "React", "AWS S3"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
       githubUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
       gradient: "gradient-bg-2",
@@ -32,9 +32,9 @@ export function Projects() {
     {
       title: "MedAI: Skin Cancer Classifier",
       description:
-        "Clinical-grade diagnostic tool leveraging ensemble deep learning for melanoma detection. Trained on 10,000+ dermatological images with 94% accuracy, potentially saving lives through early detection and accessible healthcare.",
+        "Production-grade medical diagnostic web application with 94% accuracy. Built complete healthcare solution including patient management, secure data handling, and integration with hospital systems for clinical deployment.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Medical AI", "Ensemble Learning", "Dash Framework", "Clinical Validation"],
+      technologies: ["Medical AI", "Dash", "PostgreSQL", "HIPAA Compliance"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/Skin-Cancer-Detection",
       githubUrl: "https://github.com/HAMMAD-Shahid27/Skin-Cancer-Detection",
       gradient: "gradient-bg-3",
@@ -43,9 +43,9 @@ export function Projects() {
     {
       title: "SmartPayroll: Enterprise Solution",
       description:
-        "Intelligent payroll automation system with ML-powered anomaly detection. Features advanced role-based security, automated tax calculations, and predictive analytics for workforce management—serving 500+ employees efficiently.",
+        "Comprehensive payroll management system serving 500+ employees. Features intelligent automation, advanced security, real-time analytics dashboard, and seamless integration with existing HR infrastructure.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Machine Learning", "Security Architecture", "Database Design", "Business Intelligence"],
+      technologies: ["Machine Learning", "Node.js", "MongoDB", "React Dashboard"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/Payroll-Management-System",
       githubUrl: "https://github.com/HAMMAD-Shahid27/Payroll-Management-System",
       gradient: "gradient-bg-4",
@@ -59,10 +59,10 @@ export function Projects() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Featured Research & Projects
+              Featured Projects & Applications
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Cutting-edge AI solutions that bridge academic research with real-world impact
+              AI research transformed into production-ready applications and scalable software solutions
             </p>
           </div>
 

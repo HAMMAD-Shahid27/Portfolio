@@ -5,47 +5,47 @@ import { Brain, Code, Cloud, Wrench } from "lucide-react"
 export function Skills() {
   const skillCategories = [
     {
-      title: "AI & Deep Learning",
+      title: "Computer Vision",
       icon: Brain,
       color: "from-indigo-500 to-purple-600",
       skills: [
-        { name: "PyTorch & Neural Networks", level: 95 },
-        { name: "Computer Vision (OpenCV)", level: 92 },
-        { name: "TensorFlow & Keras", level: 88 },
-        { name: "Unsupervised Learning", level: 90 },
+        { name: "OpenCV & Image Processing", level: 95 },
+        { name: "Object Detection (YOLO, R-CNN)", level: 92 },
+        { name: "Video Analysis & Segmentation", level: 90 },
+        { name: "PyTorch & TensorFlow", level: 88 },
       ],
     },
     {
-      title: "Programming & Data",
+      title: "LLMs & NLP",
       icon: Code,
       color: "from-purple-500 to-pink-600",
       skills: [
-        { name: "Python (Advanced)", level: 96 },
-        { name: "NumPy & Pandas", level: 90 },
-        { name: "Scientific Computing", level: 87 },
-        { name: "Algorithm Design", level: 85 },
+        { name: "Large Language Models", level: 90 },
+        { name: "Transformers & BERT", level: 88 },
+        { name: "LangChain & RAG Systems", level: 85 },
+        { name: "Conversational AI", level: 87 },
       ],
     },
     {
-      title: "MLOps & Deployment",
+      title: "Deep Learning",
       icon: Cloud,
       color: "from-blue-500 to-cyan-600",
       skills: [
-        { name: "Docker & Containerization", level: 82 },
-        { name: "AWS Cloud Services", level: 78 },
-        { name: "FastAPI & Streamlit", level: 88 },
-        { name: "Model Optimization", level: 85 },
+        { name: "Neural Network Architecture", level: 92 },
+        { name: "Model Optimization & Deployment", level: 88 },
+        { name: "GANs & Generative Models", level: 85 },
+        { name: "Transfer Learning", level: 90 },
       ],
     },
     {
-      title: "Research Tools",
+      title: "Web Development",
       icon: Wrench,
       color: "from-green-500 to-teal-600",
       skills: [
-        { name: "Git & Version Control", level: 93 },
-        { name: "Jupyter & Research", level: 95 },
-        { name: "Data Visualization", level: 86 },
-        { name: "Technical Writing", level: 82 },
+        { name: "React & Next.js", level: 88 },
+        { name: "Python (Django/FastAPI)", level: 92 },
+        { name: "Django REST Framework", level: 90 },
+        { name: "Database Design (SQL/NoSQL)", level: 87 },
       ],
     },
   ]
@@ -59,7 +59,7 @@ export function Skills() {
               Technical Expertise
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A comprehensive toolkit for building next-generation AI solutions
+              Comprehensive skill set spanning AI/ML engineering and full-stack development
             </p>
           </div>
 
