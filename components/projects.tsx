@@ -13,14 +13,14 @@ export function Projects() {
         "Revolutionary unsupervised video object segmentation system with production-ready deployment. Built end-to-end pipeline from research implementation to scalable application, achieving state-of-the-art results on DAVIS-2016 dataset.",
       image:
         "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation/blob/main/BiCycle.gif?raw=true",
-      technologies: ["PyTorch", "RAFT Optical Flow", "FastAPI", "Docker"],
+      technologies: ["PyTorch", "Optical Flow", "UVOS", "Contrastive Learning"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
       githubUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
       gradient: "gradient-bg-1",
       stats: { stars: 12, forks: 4 },
     },
     {
-      title: "LLM Based Twilio Callbot Chatbot",
+      title: "LLM Based Twilio Chatbot",
       description:
         "AI-powered voice chatbot built with Twilio, OpenAI GPT, and Python. Features natural speech recognition, text-to-speech synthesis, conversation memory, and a beautiful web dashboard. Perfect for customer service automation and voice AI applications.",
       image: "/placeholder.svg?height=300&width=500",
@@ -31,11 +31,11 @@ export function Projects() {
       stats: { stars: 8, forks: 3 },
     },
     {
-      title: "AI Photo Restoration Engine",
+      title: "AI Photo Restoration",
       description:
         "Full-stack photo restoration application combining advanced GANs with intuitive web interface. Features real-time processing, batch operations, and RESTful API for seamless integration with existing workflows.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["GANs", "Flask", "React", "AWS S3"],
+      image: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration/blob/main/before_after_grid.png",
+      technologies: ["Restoration", "Flask", "React", "Control-Net","Replicate ApI"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
       githubUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
       gradient: "gradient-bg-2",
