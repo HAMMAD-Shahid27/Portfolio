@@ -62,7 +62,7 @@ export function About() {
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-2xl mx-auto">
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
-                  <h4 className="text-2xl font-bold text-indigo-600 mb-1">5+</h4>
+                  <h4 className="text-2xl font-bold text-indigo-600 mb-1">20+</h4>
                   <p className="text-gray-600 text-sm">AI/ML Projects</p>
                 </div>
                 <div className="text-center p-4 bg-white rounded-lg shadow-md">
