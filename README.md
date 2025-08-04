@@ -12,19 +12,9 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 ## Deployment
 
-Your project is live at:
+Live at:
 
-**[https://vercel.com/hammadshahid980-gmailcoms-projects/v0-make-a-portfolio](https://vercel.com/hammadshahid980-gmailcoms-projects/v0-make-a-portfolio)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/OTZIMXWhdXA](https://v0.dev/chat/projects/OTZIMXWhdXA)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
+  https://hammad-shahid-portfolio.vercel.app
+  
+## tory
 4. Vercel deploys the latest version from this repository
