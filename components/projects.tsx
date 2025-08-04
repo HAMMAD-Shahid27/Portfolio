@@ -10,8 +10,8 @@ export function Projects() {
     {
       title: "UVOS: Next-Gen Video Segmentation",
       description:
-        "Revolutionary unsupervised video object segmentation system with production-ready deployment. Built end-to-end pipeline from research implementation to scalable application, achieving state-of-the-art results on DAVIS-2017 dataset.",
-      image: "/placeholder.svg?height=300&width=500",
+        "Revolutionary unsupervised video object segmentation system with production-ready deployment. Built end-to-end pipeline from research implementation to scalable application, achieving state-of-the-art results on DAVIS-2016 dataset.",
+      image: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation/blob/main/BiCycle.gif?raw=true",
       technologies: ["PyTorch", "RAFT Optical Flow", "FastAPI", "Docker"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
       githubUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
@@ -19,13 +19,13 @@ export function Projects() {
       stats: { stars: 12, forks: 4 },
     },
     {
-      title: "AI Photo Restoration Engine",
+      title: "LLM Based Twilio Callbot Chatbot",
       description:
-        "Full-stack photo restoration application combining advanced GANs with intuitive web interface. Features real-time processing, batch operations, and RESTful API for seamless integration with existing workflows.",
+        "AI-powered voice chatbot built with Twilio, OpenAI GPT, and Python. Features natural speech recognition, text-to-speech synthesis, conversation memory, and a beautiful web dashboard. Perfect for customer service automation and voice AI applications.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["GANs", "Flask", "React", "AWS S3"],
-      liveUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
-      githubUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
+      technologies: ["LLMS", "Flask", "HTML", "Twilio","CallBot"],
+      liveUrl: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT",
+      githubUrl: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT",
       gradient: "gradient-bg-2",
       stats: { stars: 8, forks: 3 },
     },
