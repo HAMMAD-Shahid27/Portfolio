@@ -50,7 +50,7 @@ Hi! I'm **Hammad Shahid**, a passionate AI researcher and developer with experti
 Have a project in mind, or want to collaborate?
 
 📧 Email: [hammadshahid980@gmail.com](mailto:hammadshahid980@gmail.com)  
-🌐 LinkedIn: [linkedin.com/in/hammadshahid](https://linkedin.com/in/hammadshahid)
+🌐 LinkedIn: [linkedin.com/in/hammadshahid](https://www.linkedin.com/in/hammad-shahid-23a560350/)
 
 ---
 
