@@ -30,6 +30,17 @@ export function Projects() {
       stats: { stars: 8, forks: 3 },
     },
     {
+      title: "AI Photo Restoration Engine",
+      description:
+        "Full-stack photo restoration application combining advanced GANs with intuitive web interface. Features real-time processing, batch operations, and RESTful API for seamless integration with existing workflows.",
+      image: "/placeholder.svg?height=300&width=500",
+      technologies: ["GANs", "Flask", "React", "AWS S3"],
+      liveUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
+      githubUrl: "https://github.com/HAMMAD-Shahid27/AI-Photo-Restoration",
+      gradient: "gradient-bg-2",
+      stats: { stars: 8, forks: 3 },
+    },
+    {
       title: "MedAI: Skin Cancer Classifier",
       description:
         "Production-grade medical diagnostic web application with 94% accuracy. Built complete healthcare solution including patient management, secure data handling, and integration with hospital systems for clinical deployment.",
@@ -39,17 +50,6 @@ export function Projects() {
       githubUrl: "https://github.com/HAMMAD-Shahid27/Skin-Cancer-Detection",
       gradient: "gradient-bg-3",
       stats: { stars: 15, forks: 7 },
-    },
-    {
-      title: "SmartPayroll: Enterprise Solution",
-      description:
-        "Comprehensive payroll management system serving 500+ employees. Features intelligent automation, advanced security, real-time analytics dashboard, and seamless integration with existing HR infrastructure.",
-      image: "/placeholder.svg?height=300&width=500",
-      technologies: ["Machine Learning", "Node.js", "MongoDB", "React Dashboard"],
-      liveUrl: "https://github.com/HAMMAD-Shahid27/Payroll-Management-System",
-      githubUrl: "https://github.com/HAMMAD-Shahid27/Payroll-Management-System",
-      gradient: "gradient-bg-4",
-      stats: { stars: 6, forks: 2 },
     },
   ]
 
