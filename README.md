@@ -41,16 +41,15 @@ Hi! I'm **Hammad Shahid**, a passionate AI researcher and developer with experti
 
 ## 🔗 Live Website
 
-👉 **View Portfolio:** [https://hammad-shahid-portfolio.vercel.app](https://hammad-shahid-portfolio.vercel.app)
+[![🌐 Portfolio](https://img.shields.io/badge/View%20Portfolio-Click%20Here-blue?style=for-the-badge)](https://hammad-shahid-portfolio.vercel.app)
 
 ---
 
 ## 📬 Contact Me
 
-Have a project in mind, or want to collaborate?
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/hammad-shahid-23a560350/)  
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-informational?logo=gmail&style=for-the-badge)](mailto:hammadshahid980@gmail.com)
 
-📧 Email: [hammadshahid980@gmail.com](mailto:hammadshahid980@gmail.com)  
-🌐 LinkedIn: [linkedin.com/in/hammadshahid](https://www.linkedin.com/in/hammad-shahid-23a560350/)
 
 ---
 
