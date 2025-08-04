@@ -11,7 +11,8 @@ export function Projects() {
       title: "UVOS: Next-Gen Video Segmentation",
       description:
         "Revolutionary unsupervised video object segmentation system with production-ready deployment. Built end-to-end pipeline from research implementation to scalable application, achieving state-of-the-art results on DAVIS-2016 dataset.",
-      image: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation/blob/main/BiCycle.gif?raw=true",
+      image:
+        "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation/blob/main/BiCycle.gif?raw=true",
       technologies: ["PyTorch", "RAFT Optical Flow", "FastAPI", "Docker"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
       githubUrl: "https://github.com/HAMMAD-Shahid27/UVOS-Unsupervised-video-object-segmentation",
@@ -23,7 +24,7 @@ export function Projects() {
       description:
         "AI-powered voice chatbot built with Twilio, OpenAI GPT, and Python. Features natural speech recognition, text-to-speech synthesis, conversation memory, and a beautiful web dashboard. Perfect for customer service automation and voice AI applications.",
       image: "/placeholder.svg?height=300&width=500",
-      technologies: ["LLMS", "Flask", "HTML", "Twilio","CallBot"],
+      technologies: ["LLMS", "Flask", "HTML", "Twilio", "CallBot"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT",
       githubUrl: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT",
       gradient: "gradient-bg-2",
@@ -73,17 +74,44 @@ export function Projects() {
                 className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 shadow-lg group"
               >
                 <CardContent className="p-0">
-                  <div className={`h-48 ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
+                  <div className="h-48 relative overflow-hidden bg-gray-100">
+                    <img
+                      src={project.image || "/placeholder.svg"}
+                      alt={`${project.title} demonstration`}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        // Fallback to gradient if image fails to load
+                        e.currentTarget.style.display = "none"
+                        e.currentTarget.nextElementSibling.style.display = "flex"
+                      }}
+                    />
+                    <div
+                      className={`absolute inset-0 ${project.gradient} items-center justify-center text-white hidden`}
+                    >
+                      <div className="text-center">
+                        <h3 className="text-xl font-bold mb-2">{project.title.split(":")[0]}</h3>
+                        <div className="flex items-center justify-center space-x-4 text-sm">
+                          <div className="flex items-center">
+                            <Star className="w-4 h-4 mr-1" />
+                            {project.stats.stars}
+                          </div>
+                          <div className="flex items-center">
+                            <GitFork className="w-4 h-4 mr-1" />
+                            {project.stats.forks}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Overlay for better text readability */}
                     <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="relative z-10 text-center text-white">
-                      <h3 className="text-xl font-bold mb-2">{project.title.split(":")[0]}</h3>
-                      <div className="flex items-center justify-center space-x-4 text-sm">
+                    <div className="absolute bottom-2 right-2 bg-white/90 rounded px-2 py-1">
+                      <div className="flex items-center space-x-2 text-xs text-gray-700">
                         <div className="flex items-center">
-                          <Star className="w-4 h-4 mr-1" />
+                          <Star className="w-3 h-3 mr-1" />
                           {project.stats.stars}
                         </div>
                         <div className="flex items-center">
-                          <GitFork className="w-4 h-4 mr-1" />
+                          <GitFork className="w-3 h-3 mr-1" />
                           {project.stats.forks}
                         </div>
                       </div>
