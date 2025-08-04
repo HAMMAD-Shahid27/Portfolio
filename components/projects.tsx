@@ -23,7 +23,7 @@ export function Projects() {
       title: "LLM Based Twilio Chatbot",
       description:
         "AI-powered voice chatbot built with Twilio, OpenAI GPT, and Python. Features natural speech recognition, text-to-speech synthesis, conversation memory, and a beautiful web dashboard. Perfect for customer service automation and voice AI applications.",
-      image: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT/blob/main/CHATBOT.gif",
+      image: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT/raw/main/CHATBOT.gif",
       technologies: ["LLMs", "Flask", "Twilio", "OpenAI", "Voice AI"],
       liveUrl: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT",
       githubUrl: "https://github.com/HAMMAD-Shahid27/TWILIO-CHATBOT",
