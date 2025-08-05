@@ -55,19 +55,19 @@ export function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="projects" className="py-12 sm:py-20 px-3 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent px-2">
               Featured Projects & Applications
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
               AI research transformed into production-ready applications and scalable software solutions
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
@@ -92,14 +92,15 @@ function ProjectCard({ project }: { project: any }) {
   }
 
   return (
-    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 shadow-lg group">
+    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 shadow-lg group mx-2 sm:mx-0">
       <CardContent className="p-0">
-        <div className="h-40 relative overflow-hidden bg-gray-100">
+        <div className="h-32 sm:h-40 relative overflow-hidden bg-gray-100">
           {!imageError ? (
             <>
               {imageLoading && (
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-200">
+                  <div className="animate-spin rounded-full h-6 w-6 sm:h-8 sm:w-8 border-b-2 border-indigo-600 mb-2"></div>
+                  <p className="text-xs text-gray-500 hidden sm:block">Loading project demo...</p>
                 </div>
               )}
               <img
@@ -111,14 +112,15 @@ function ProjectCard({ project }: { project: any }) {
                 onError={handleImageError}
                 onLoad={handleImageLoad}
                 loading="lazy"
+                decoding="async"
               />
             </>
           ) : (
             // Fallback gradient background
             <div className={`h-full bg-gradient-to-br ${project.gradient} flex items-center justify-center relative`}>
               <div className="absolute inset-0 bg-black/20"></div>
-              <div className="relative z-10 text-center text-white">
-                <h3 className="text-xl font-bold mb-2">{project.title.split(":")[0]}</h3>
+              <div className="relative z-10 text-center text-white px-4">
+                <h3 className="text-lg sm:text-xl font-bold mb-2">{project.title.split(":")[0]}</h3>
                 <div className="flex items-center justify-center space-x-4 text-sm">
                   <div className="flex items-center">
                     <Star className="w-4 h-4 mr-1" />
@@ -154,13 +156,15 @@ function ProjectCard({ project }: { project: any }) {
         </div>
       </CardContent>
 
-      <CardHeader className="pb-4">
-        <CardTitle className="text-xl text-gray-800">{project.title}</CardTitle>
-        <CardDescription className="text-gray-600 leading-relaxed">{project.description}</CardDescription>
+      <CardHeader className="pb-3 sm:pb-4 px-4 sm:px-6">
+        <CardTitle className="text-lg sm:text-xl text-gray-800 leading-tight">{project.title}</CardTitle>
+        <CardDescription className="text-sm sm:text-base text-gray-600 leading-relaxed line-clamp-3 sm:line-clamp-none">
+          {project.description}
+        </CardDescription>
       </CardHeader>
 
-      <CardContent className="pt-0">
-        <div className="flex flex-wrap gap-2 mb-6">
+      <CardContent className="pt-0 px-4 sm:px-6 pb-4 sm:pb-6">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
           {project.technologies.map((tech, techIndex) => (
             <Badge
               key={tech}
@@ -176,10 +180,10 @@ function ProjectCard({ project }: { project: any }) {
           ))}
         </div>
 
-        <div className="flex gap-3">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
           <Button
             size="sm"
-            className="flex-1 bg-indigo-600 hover:bg-indigo-700"
+            className="w-full sm:flex-1 bg-indigo-600 hover:bg-indigo-700 text-sm"
             onClick={() => window.open(project.liveUrl, "_blank")}
           >
             <ExternalLink className="h-4 w-4 mr-2" />
@@ -188,10 +192,11 @@ function ProjectCard({ project }: { project: any }) {
           <Button
             variant="outline"
             size="sm"
-            className="border-indigo-200 text-indigo-600 hover:bg-indigo-50 bg-transparent"
+            className="w-full sm:w-auto border-indigo-200 text-indigo-600 hover:bg-indigo-50 bg-transparent"
             onClick={() => window.open(project.githubUrl, "_blank")}
           >
-            <Github className="h-4 w-4" />
+            <Github className="h-4 w-4 mr-2 sm:mr-0" />
+            <span className="sm:hidden">GitHub</span>
           </Button>
         </div>
       </CardContent>

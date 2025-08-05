@@ -67,7 +67,7 @@ export function Contact() {
                 <div className="space-y-4">
                   <div className="flex items-center text-sm text-gray-600">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                    Available for software development projects
+                    Offering services in AI, ML, DL, LLMs, and development projects
                   </div>
                   <div className="flex items-center text-sm text-gray-600">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
