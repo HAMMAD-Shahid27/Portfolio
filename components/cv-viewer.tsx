@@ -17,8 +17,8 @@ export function CVViewer({ triggerButton }: CVViewerProps) {
   const handleDownload = () => {
     // Create a link element and trigger download
     const link = document.createElement("a")
-    link.href = "https://github.com/HAMMAD-Shahid27/Portfolio/blob/main/Hammad_CV.pdf"
-    link.download = "https://github.com/HAMMAD-Shahid27/Portfolio/blob/main/Hammad_CV.pdf"
+    link.href = "https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf"
+    link.download = "https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
