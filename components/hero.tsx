@@ -1,9 +1,20 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download } from "lucide-react"
+import { Github, Linkedin, Mail, Download, Eye } from "lucide-react"
+import { CVViewer } from "@/components/cv-viewer"
 
 export function Hero() {
+  const handleDownloadCV = () => {
+    // Create a link element and trigger download
+    const link = document.createElement("a")
+    link.href = "/Hammad_CV.pdf"
+    link.download = "Hammad_Shahid_CV.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="container mx-auto">
@@ -48,17 +59,30 @@ export function Hero() {
                   <Github className="h-5 w-5 mr-2" />
                   Explore My Projects
                 </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto border-indigo-200 text-indigo-600 hover:bg-indigo-50 bg-transparent"
-                  onClick={() => {
-                    alert("CV download will be available soon! For now, please contact me via email.")
-                  }}
-                >
-                  <Download className="h-5 w-5 mr-2" />
-                  Download CV
-                </Button>
+
+                <div className="flex gap-2 w-full sm:w-auto">
+                  <CVViewer
+                    triggerButton={
+                      <Button
+                        size="lg"
+                        className="flex-1 sm:flex-none bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg border-0"
+                      >
+                        <Eye className="h-5 w-5 mr-2" />
+                        <span className="hidden sm:inline">Show CV</span>
+                        <span className="sm:hidden">View</span>
+                      </Button>
+                    }
+                  />
+                  <Button
+                    size="lg"
+                    className="flex-1 sm:flex-none bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg border-0"
+                    onClick={handleDownloadCV}
+                  >
+                    <Download className="h-5 w-5 mr-2" />
+                    <span className="hidden sm:inline">Download</span>
+                    <span className="sm:hidden">Save</span>
+                  </Button>
+                </div>
               </div>
 
               <div className="flex justify-center lg:justify-start space-x-6">
