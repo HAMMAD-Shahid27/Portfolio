@@ -9,7 +9,7 @@ export function Hero() {
     // Create a link element and trigger download
     const link = document.createElement("a")
     link.href = "https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf"
-    link.download = "https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf"
+    link.download = "Hammad_Shahid_CV.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -60,6 +60,7 @@ export function Hero() {
                   Explore My Projects
                 </Button>
 
+                {/* Updated CV buttons section */}
                 <div className="flex gap-2 w-full sm:w-auto">
                   <CVViewer
                     triggerButton={
@@ -79,8 +80,8 @@ export function Hero() {
                     onClick={handleDownloadCV}
                   >
                     <Download className="h-5 w-5 mr-2" />
-                    <span className="hidden sm:inline">Download</span>
-                    <span className="sm:hidden">Save</span>
+                    <span className="hidden sm:inline">Download CV</span>
+                    <span className="sm:hidden">Download</span>
                   </Button>
                 </div>
               </div>
