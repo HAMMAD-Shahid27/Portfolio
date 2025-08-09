@@ -14,7 +14,7 @@ export function CVViewer({ triggerButton }: CVViewerProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleOpenInNewTab = () => {
-    window.open("https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf", "_blank")
+    window.open("https://github.com/HAMMAD-Shahid27/CV/blob/main/Hammad_CV.pdf", "_blank")
   }
 
   return (
@@ -48,7 +48,7 @@ export function CVViewer({ triggerButton }: CVViewerProps) {
         <div className="flex-1 p-6 pt-2">
           <div className="w-full h-full border rounded-lg overflow-hidden bg-gray-50">
             <iframe
-              src="https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf"
+              src="https://github.com/HAMMAD-Shahid27/CV/blob/main/Hammad_CV.pdf"
               className="w-full h-full"
               title="Hammad Shahid CV"
               onError={() => {
