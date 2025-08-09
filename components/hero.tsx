@@ -6,13 +6,20 @@ import { CVViewer } from "@/components/cv-viewer"
 
 export function Hero() {
   const handleDownloadCV = () => {
-    // Create a link element and trigger download
-    const link = document.createElement("a")
-    link.href = "https://github.com/HAMMAD-Shahid27/CV/raw/main/Hammad_CV.pdf"
-    link.download = "Hammad_Shahid_CV.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    try {
+      // Create a link element and trigger download
+      const link = document.createElement("a")
+      link.href = "https://github.com/HAMMAD-Shahid27/CV/raw/main/Hammad_CV.pdf"
+      link.download = "Hammad_Shahid_CV.pdf"
+      link.target = "_blank" // Fallback for browsers that block direct downloads
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    } catch (error) {
+      console.error("Failed to download CV:", error)
+      // Fallback to opening in new tab if download fails
+      window.open("https://github.com/HAMMAD-Shahid27/CV/raw/main/Hammad_CV.pdf", "_blank")
+    }
   }
 
   return (
@@ -60,23 +67,23 @@ export function Hero() {
                   Explore My Projects
                 </Button>
 
-                {/* Updated CV buttons section */}
+                {/* Improved CV buttons section with better mobile responsiveness */}
                 <div className="flex gap-2 w-full sm:w-auto">
                   <CVViewer
                     triggerButton={
                       <Button
                         size="lg"
-                        className="flex-1 sm:flex-none bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg border-0"
+                        className="flex-1 sm:w-auto bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg border-0"
                       >
                         <Eye className="h-5 w-5 mr-2" />
-                        <span className="hidden sm:inline">Show CV</span>
+                        <span className="hidden sm:inline">View CV</span>
                         <span className="sm:hidden">View</span>
                       </Button>
                     }
                   />
                   <Button
                     size="lg"
-                    className="flex-1 sm:flex-none bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg border-0"
+                    className="flex-1 sm:w-auto bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg border-0"
                     onClick={handleDownloadCV}
                   >
                     <Download className="h-5 w-5 mr-2" />
@@ -92,6 +99,7 @@ export function Hero() {
                   size="icon"
                   className="hover:bg-indigo-100 hover:text-indigo-600"
                   onClick={() => window.open("https://github.com/HAMMAD-Shahid27", "_blank")}
+                  aria-label="GitHub profile"
                 >
                   <Github className="h-6 w-6" />
                 </Button>
@@ -100,6 +108,7 @@ export function Hero() {
                   size="icon"
                   className="hover:bg-indigo-100 hover:text-indigo-600"
                   onClick={() => window.open("https://www.linkedin.com/in/hammad-shahid-23a560350/", "_blank")}
+                  aria-label="LinkedIn profile"
                 >
                   <Linkedin className="h-6 w-6" />
                 </Button>
@@ -108,6 +117,7 @@ export function Hero() {
                   size="icon"
                   className="hover:bg-indigo-100 hover:text-indigo-600"
                   onClick={() => window.open("mailto:hammadshahid980@gmail.com")}
+                  aria-label="Email me"
                 >
                   <Mail className="h-6 w-6" />
                 </Button>
@@ -122,6 +132,9 @@ export function Hero() {
                     src="https://github.com/HAMMAD-Shahid27.png?size=400"
                     alt="Hammad Shahid - AI/ML Engineer"
                     className="w-full h-full object-cover rounded-full"
+                    width={400}
+                    height={400}
+                    loading="eager"
                   />
                 </div>
               </div>
