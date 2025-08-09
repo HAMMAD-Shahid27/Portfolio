@@ -14,7 +14,7 @@ export function CVViewer({ triggerButton }: CVViewerProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const handleOpenInNewTab = () => {
-    window.open("https://github.com/HAMMAD-Shahid27/CV/blob/main/Hammad_CV.pdf", "_blank")
+    window.open("https://github.com/HAMMAD-Shahid27/CV/raw/main/Hammad_CV.pdf", "_blank")
   }
 
   return (
