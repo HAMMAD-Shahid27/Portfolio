@@ -7,9 +7,10 @@ import { CVViewer } from "@/components/cv-viewer"
 export function Hero() {
   const handleDownloadCV = () => {
     try {
-      // Create a link element and trigger download
+      // Using the confirmed working GitHub URL
+      const cvUrl = "https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf"
       const link = document.createElement("a")
-      link.href = "https://github.com/HAMMAD-Shahid27/CV/raw/main/Hammad_CV.pdf"
+      link.href = cvUrl
       link.download = "Hammad_Shahid_CV.pdf"
       link.target = "_blank" // Fallback for browsers that block direct downloads
       document.body.appendChild(link)
@@ -18,7 +19,7 @@ export function Hero() {
     } catch (error) {
       console.error("Failed to download CV:", error)
       // Fallback to opening in new tab if download fails
-      window.open("https://github.com/HAMMAD-Shahid27/CV/raw/main/Hammad_CV.pdf", "_blank")
+      window.open("https://github.com/HAMMAD-Shahid27/Portfolio/raw/main/Hammad_CV.pdf", "_blank")
     }
   }
 
@@ -67,7 +68,6 @@ export function Hero() {
                   Explore My Projects
                 </Button>
 
-                {/* Improved CV buttons section with better mobile responsiveness */}
                 <div className="flex gap-2 w-full sm:w-auto">
                   <CVViewer
                     triggerButton={

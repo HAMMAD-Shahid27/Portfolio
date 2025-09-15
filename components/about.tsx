@@ -20,8 +20,8 @@ export function About() {
     },
     {
       icon: Target,
-      title: "Full-Stack Developer",
-      description: "End-to-end web applications with AI/ML integration",
+      title: "Business Intelligence & AI/ML Developer",
+      description: "Building intelligent, data-driven applications by combining Business Intelligence with AI/ML integration",
     },
   ]
 
@@ -34,7 +34,7 @@ export function About() {
               About Me
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              AI/ML Engineer building intelligent systems with expertise in Computer Vision, LLMs, and Web Development
+             AI/ML Engineer with expertise in Computer Vision, LLMs, and Web Development, building intelligent end-to-end systems.
             </p>
           </div>
 
